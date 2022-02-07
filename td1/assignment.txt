@@ -1,0 +1,47 @@
+openCV code
+
+
+Question 1
+
+Command #1 :
+It is used to transform the image in a grey image.
+
+Command #2 :
+ret, corners = cv2.findChessboardCorners(gray, (7,6),None)
+this is used to find the coordinates of the corners of the chess board, in the image grey (which is the image we got from previous command).
+
+Command #3 :
+cv2.cornerSubPix(gray,corners,(11,11),(-1,-1),criteria)
+imgp.append(corners)
+The first line is a call to an opencv function that makes corner coordinates more accurate.
+The second line simply appends the corners, now more accurate, to a list.
+
+# Command #4 :
+cv2.drawChessboardCorners(img, (7,6), corners,ret)
+This is the line that draws the chess board corners on the image.
+
+
+Question 2
+
+Lines 31 to 40 of the first code cell.
+
+
+Question 3
+
+The characteristic points will be used to track the chessboard when the image will be moving.
+
+
+pyOpenGL code
+
+
+Question 1
+
+Background color to blue : glClearColor(0.0, 0.0, 1.0, 0.0)
+Window size to 400*400 : glutInitWindowSize(400, 400)
+Window name : window = glutCreateWindow(b"Hello :)")
+
+
+Question 2
+
+Once the lines are decommented, we see a white triangle ▲ ▼
+The coordinates of the points are modified when we edit the parameters of the glVertex3f function.
